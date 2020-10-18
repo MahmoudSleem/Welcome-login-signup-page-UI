@@ -43,7 +43,7 @@ class Body extends StatelessWidget {
               height: size.height * 0.01,
             ),
             RoundedInputField(
-              hintText: "EMAIL",
+              hintText: "YOUR EMAIL",
               onChange: (Value) {},
             ),
             RoundedPasswordField(
@@ -52,16 +52,18 @@ class Body extends StatelessWidget {
             RoundedButton(
               text: "LOGIN",
               press: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return SignUpScreen();
-                }));
+
               },
             ),
             SizedBox(
               height: size.height * 0.01,
             ),
             AlreadyHaveAnAccountCheak(
-              press: () {},
+              press: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return SignUpScreen();
+                }));
+              },
             )
           ],
         ),

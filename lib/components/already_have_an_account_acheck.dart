@@ -15,7 +15,7 @@ class AlreadyHaveAnAccountCheak extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-            login ? "Don`t have an account ?" : "Already have an Account",
+            login ? "Don`t have an account ? " : "Already have an Account ",
             style: TextStyle(
               color: KPrimaryColor,
             )
