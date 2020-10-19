@@ -23,81 +23,87 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Background(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "SIGNUP",
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(
-              height: size.height * 0.01,
-            ),
-            SvgPicture.asset(
-              'assets/icons/signup.svg',
-              height: size.height * 0.43,
-              width: 0.5,
-            ),
-            SizedBox(
-              height: size.height * 0.01,
-            ),
-            RoundedInputField(
-              hintText: "YOUR EMAIL",
-              onChange: (Value) {},
-            ),
-            RoundedPasswordField(
-              onChanged: (value) {},
-            ),
-            RoundedButton(
-              text: "SIGNUP",
-              press: () {},
-            ),
-            SizedBox(
-              height: size.height * 0.01,
-            ),
-            AlreadyHaveAnAccountCheak(
-              login: false,
-              press: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return LoginScreen();
-                }));
-              },
-            ),
-            OrDivider(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SocialIcon(
-                  icon: 'assets/icons/facebook.svg',
-                  press: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return WelcomeScreen();
-                    }));
-                  },
-                ),
-                SocialIcon(
-                  icon: 'assets/icons/twitter.svg',
-                  press: ()  {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return WelcomeScreen();
-                    }));
-                  },
-                ),
-                SocialIcon(
-                  icon: 'assets/icons/google-plus.svg',
-                  press: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return WelcomeScreen();
-                    }));
-                  },
-                ),
+        child: Container(
 
-              ],
-            )
-          ],
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Text(
+                  "SIGNUP",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: size.height * 0.01,
+              ),
+              SvgPicture.asset(
+                'assets/icons/signup.svg',
+                height: size.height *0.41,
+
+              ),
+              SizedBox(
+                height: size.height * 0.01,
+              ),
+              RoundedInputField(
+                hintText: "YOUR EMAIL",
+                onChange: (Value) {},
+              ),
+              RoundedPasswordField(
+                onChanged: (value) {},
+              ),
+              RoundedButton(
+                text: "SIGNUP",
+                press: () {},
+              ),
+              SizedBox(
+                height: size.height * 0.01,
+              ),
+              AlreadyHaveAnAccountCheak(
+                login: false,
+                press: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return LoginScreen();
+                  }));
+                },
+              ),
+              OrDivider(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SocialIcon(
+                    icon: 'assets/icons/facebook.svg',
+                    press: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return WelcomeScreen();
+                      }));
+                    },
+                  ),
+                  SocialIcon(
+                    icon: 'assets/icons/twitter.svg',
+                    press: ()  {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return WelcomeScreen();
+                      }));
+                    },
+                  ),
+                  SocialIcon(
+                    icon: 'assets/icons/google-plus.svg',
+                    press: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return WelcomeScreen();
+                      }));
+                    },
+                  ),
+
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

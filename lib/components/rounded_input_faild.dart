@@ -14,15 +14,18 @@ class RoundedInputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFieldContainer(
-      child: TextField(
-        decoration: InputDecoration(
-          icon: Icon(
-            icon,
-            color: KPrimaryColor,
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 0),
+      child: TextFieldContainer(
+        child: TextField(
+          decoration: InputDecoration(
+            icon: Icon(
+              icon,
+              color: KPrimaryColor,
+            ),
+            hintText: hintText,
+            border: InputBorder.none,
           ),
-          hintText: hintText,
-          border: InputBorder.none,
         ),
       ),
     );
