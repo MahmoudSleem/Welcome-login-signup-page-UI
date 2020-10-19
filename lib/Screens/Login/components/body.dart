@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:wilcome_login/Screens/SignUp/signup_screen.dart';
 import 'package:wilcome_login/components/already_have_an_account_acheck.dart';
+import 'package:wilcome_login/components/chang_password_show.dart';
 import 'package:wilcome_login/components/rounded_button.dart';
 import 'package:wilcome_login/components/rounded_input_faild.dart';
 import 'package:wilcome_login/components/rounded_password_field.dart';
@@ -44,15 +45,14 @@ class Body extends StatelessWidget {
             ),
             RoundedInputField(
               hintText: "YOUR EMAIL",
-              onChange: (Value) {},
+              onChange: (value) {},
             ),
-            RoundedPasswordField(
+            changVisible(
               onChanged: (value) {},
             ),
             RoundedButton(
               text: "LOGIN",
               press: () {
-
               },
             ),
             SizedBox(
